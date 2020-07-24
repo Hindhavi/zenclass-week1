@@ -1,0 +1,39 @@
+OBJECT
+Objects are same in all programming languages i.e they represent real-world things that we want to represent inside our programs with characteristics/properties and methods. In JavaScript Objects are kind of String/Number  Index Array represented inside curly brackets 
+Var obj = {
+1: “NAME”,
+"Maths" :100
+}
+KEY VALUE PAIR
+In the above example obj is an object with 2 properties with key as 1 and Maths and value as Name and 100.Here the index are called as KEY.KEY :VALUE pair together called as entries
+Object literals are a comma-separated list of key-value pairs wrapped in curly braces. Object literal property values can be of any data type, including array literals, functions, nested object literals or primitive data type.
+Obj Values  in the above can be accessed via Dot notation i.e obj.1 ,obj.Maths  or via a square bracket notation i.e obj[1] ,obj[“Maths”]
+Object.assign() METHOD
+As we discussed earlier in JavaScript Objects are kind of String/Number  Index Array represented inside curly brackets.So with the help of object.assign() method we can convert the array into object.
+var arr = [“a”,”b”,”c”]
+var obj = Object.assign({},arr}
+// obj = {0:”a”, 1:”b”,2:”3”}
+In the above example array indexes are converted as key for objects.
+
+Object.assign method also helps to merge the objects
+const obj1 = { a: 1 };
+const obj2 = { b: 2 };
+const obj3 = { c: 3 };
+
+const obj = Object.assign({},obj1, obj2, obj3);
+console.log(obj); // { a: 1, b: 2, c: 3 }
+console.log(obj1);  // { a: 1, b: 2, c: 3 }, target object itself is changed.
+
+const obj1 = { a: 1, b: 1, c: 1 };
+const obj2 = { b: 2, c: 2 };
+const obj3 = { c: 3 };
+
+const obj = Object.assign({}, obj1, obj2, obj3);
+console.log(obj); // { a: 1, b: 2, c: 3 }
+
+To get all the key in separate array
+Object.Keys(obj)
+To get all the key in a separate array
+Object.Values(obj)
+To get all the key value pair in array
+Object.entries(obj)
